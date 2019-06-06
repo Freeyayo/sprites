@@ -16,23 +16,26 @@ let mouse = 0;
 let isrLegUp = true;
 let isBoxShow = 0;
 
-createBoy()
+createGirl()
 
-function createBoy(){
-	requestAnimationFrame(createBoy);
+function createGirl(){
+	requestAnimationFrame(createGirl);
 	c.fillStyle = `rgba(255,255,255,.35)`;
 	c.fillRect(0,0,canvas.width,canvas.height);
 	defaultBoy(DirX,DirY,Speed,"what's your name");
 }
 
 function defaultBoy(dirx,diry,speed,txt){
-	c.fillStyle = "orange";	//face
+	c.fillStyle = "#f6e1c3";	//face
 	c.fillRect(200*scale+dirx*speed,200*scale+diry*speed,100*scale,100*scale);
 
-	c.fillStyle = "brown";	//hair
+							//hair
+	c.fillStyle = "#ffeb3b";
 	c.fillRect(200*scale+dirx*speed,170*scale+diry*speed,100*scale,30*scale);
-
-	c.fillStyle = "black";	//brows
+	c.fillRect(180*scale+dirx*speed,200*scale+diry*speed,30*scale,80*scale);
+	c.fillRect(290*scale+dirx*speed,200*scale+diry*speed,30*scale,80*scale);
+							//brows
+	c.fillStyle = "black";
 	c.fillRect(215*scale+dirx*speed,220*scale+diry*speed,20*scale,5*scale);
 	c.fillRect(265*scale+dirx*speed,220*scale+diry*speed,20*scale,5*scale);
 							//eyes
@@ -41,9 +44,10 @@ function defaultBoy(dirx,diry,speed,txt){
 							//mouse
 	c.fillRect(235*scale+dirx*speed,270*scale+diry*speed,30*scale,(5+mouse)*scale);
 							//body
+	c.fillStyle = "pink";
 	c.fillRect(200*scale+dirx*speed,300*scale+diry*speed,100*scale,100*scale);
 							//arms
-	c.fillStyle = "orange";	
+	c.fillStyle = "#f6e1c3";	
 	c.fillRect(180*scale+dirx*speed,300*scale+diry*speed,20*scale,100*scale);
 	c.fillRect(300*scale+dirx*speed,300*scale+diry*speed,20*scale,100*scale);
 							//legs
